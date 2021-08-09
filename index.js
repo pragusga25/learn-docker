@@ -8,7 +8,7 @@ const flag = process.env.FLAG || 'CTFTC{REDACTED}';
 
 app.get('/', (_, res) => {
   res.send(
-    `<h1>Hello World</h1> <p>Listening on port ${port}</p> <p>I'm in ${process.env.NODE_ENV}</p>`
+    `<h1>Hello Dunia</h1> <p>Listening on port ${port}</p> <p>I'm in ${process.env.NODE_ENV}</p>`
   );
 });
 
