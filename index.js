@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 const flag = process.env.FLAG || 'CTFTC{REDACTED}';
 
 app.get('/', (_, res) => {
-  res.send('<h1>Hello You</h1>');
+  res.send('<h1>Hello World</h1>');
 });
 
 app.get('/flag', (_, res) => {
