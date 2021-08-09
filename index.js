@@ -2,12 +2,12 @@ const express = require('express');
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 1234;
 
 const flag = process.env.FLAG || 'CTFTC{REDACTED}';
 
 app.get('/', (_, res) => {
-  res.send('<h1>Hello World</h1>');
+  res.send(`<h1>Hello World</h1> <p>Listening on port ${port}</p>`);
 });
 
 app.get('/flag', (_, res) => {
