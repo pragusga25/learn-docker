@@ -7,6 +7,7 @@ const {
   MONGO_PORT,
 } = require('./config/config');
 const postRouter = require('./routes/postRoutes');
+const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
@@ -44,6 +45,7 @@ app.get('/flag', (_, res) => {
 });
 
 app.use('/api/posts', postRouter);
+app.use('/api/users', userRouter);
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
