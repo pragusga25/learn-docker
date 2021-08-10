@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const redis = require('redis');
@@ -59,7 +60,9 @@ app.use(
   })
 );
 
+app.enable('trust proxy');
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (_, res) => {
   res.send(
