@@ -1,8 +1,21 @@
 version: '3'
 services:
   express-app:
+    container_name: express-app
     build: .
     ports:
-      - '3000:3000'
+      - 3000:3000
     environment:
       - PORT=3000
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=pass
+      - MONGO_INITDB_ROOT_PASSWORD=pass1234
+    volumes:
+      - mongo_db:/data/db
+
+volumes:
+  mongo_db:
