@@ -13,6 +13,7 @@ services:
       - FLAG=CTFTC{pragusGANS}
       - MONGO_USER=pass
       - MONGO_PASSWORD=pass1234
+      - SESSION_SECRET=tCx32zdUhOFbcQIzyXr6
     command: npm run dev
 
   mongo:
